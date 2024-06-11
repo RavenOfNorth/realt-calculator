@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RealEstate ProfitCalc</title>
+</head>
+    <body>
+        <div class="container">
+            <h1>Калькулятор агента по недвижимости</h1>
+            <div class="data">
+                <label for="square">Общая площадь квартиры (кв.м.)</label>
+                <input class="input-value" id="square" type="number" name="square" required><br>
+                <label for="cost-dollar">Стоимость квартиры в $</label>
+                <input class="input-value" id="cost-dollar" type="number" name="cost-dollar" required><br>
+                <button id="calculator-btn" type="submit">Рассчитать</button>
+            </div>
+            <div class="result">
+                <label for="adr-cost">Стоимость 1 кв.м.</label>
+                <p class="result-value" id="adr-cost"></p>
+                <label for="transaction-fee">Процент от сделки (%)</label>
+                <p class="result-value" id="transaction-fee"></p>
+                <label for="agency-fraction">Доля агенства (USD)</label>
+                <p class="result-value" id="agency-fraction"></p>
+                <label for="agent-fraction">Доля агента (USD)</label>
+                <p class="result-value" id="agent-fraction"></p>
+                <label for="seller-fraction">Доля продавца (USD)</label>
+                <p class="result-value" id="seller-fraction"></p>
+            </div>
+        </div>
+    </body>
+</html>
