@@ -1,13 +1,13 @@
 import {defaultAgencyPercent} from "./defaultAgencyPercent/defaultAgencyPercent.module.js";
 import {getAgencyFraction} from "./AgencyFraction/agencyFraction.module.js";
-
+import {inputValidator} from "./inputValidator/inputValidator.module.js";
 
 export function App () {
+    if (!inputValidator()) return;
     // Получаем исходные данные для расчётов:
     const flatSquare = Number(document.getElementById("square").value); // Площадь квартиры
     const flatCost = Number(document.getElementById("cost-dollar").value); // Стоимость квартиры в $
     const exchangeRate = Number(document.getElementById("nbrb-dollar").value); // Курс доллара по НБ РБ
-
 
 // Инициализируем поля вывода результатов расчётов
     const costForMeter = document.getElementById("adr-cost");
@@ -18,6 +18,8 @@ export function App () {
 
     // Базовая величина в белорусских рублях
     const base = 40;
+
+    inputValidator(flatSquare, flatCost);
 
     // Блок расчётов
     let bynFlatCost = flatCost * exchangeRate
