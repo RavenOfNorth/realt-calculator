@@ -1,4 +1,4 @@
-import {getUsdExchangeRate} from "./getElement/getUsdExchangeRate.module.js";
+import {getUsdExchangeRate} from "./CurrencyParser/CurrencyParser.module.js";
 
 export function parser() {
     document.addEventListener("DOMContentLoaded", async () => {
