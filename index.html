@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>RealEstate ProfitCalc</title>
 </head>
     <body>
@@ -13,8 +14,10 @@
             <div class="data">
                 <label for="square">Общая площадь квартиры (кв.м.)</label>
                 <input class="input-value" id="square" type="number" name="square" required><br>
-                <label for="cost-dollar">Стоимость квартиры в $</label>
+                <label for="cost-dollar">Стоимость квартиры в USD</label>
                 <input class="input-value" id="cost-dollar" type="number" name="cost-dollar" required><br>
+                <label for="nbrb-dollar">Курс USD НБРБ</label>
+                <input class="input-value" id="nbrb-dollar" type="number" name="cost-dollar" required><br>
                 <button id="calculator-btn" type="submit">Рассчитать</button>
             </div>
             <div class="result">
@@ -30,5 +33,6 @@
                 <p class="result-value" id="seller-fraction"></p>
             </div>
         </div>
+    <script src="js/script.js"></script>
     </body>
 </html>
