@@ -32,6 +32,6 @@ export function App () {
     costForMeter.textContent = costPerSquareMeter;
     transactionFee.textContent = agencyPercent.toFixed(2);
     agencyFraction.textContent = String(agencyFractionValue);
-    agentFraction.textContent = agentFractionValue;
+    // agentFraction.textContent = agentFractionValue;
     sellerFraction.textContent = sellerFractionValue.toFixed(2);
 }
