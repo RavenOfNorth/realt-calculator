@@ -13,7 +13,7 @@ export function App () {
     const costForMeter = document.getElementById("adr-cost");
     const transactionFee = document.getElementById("transaction-fee");
     const agencyFraction = document.getElementById("agency-fraction");
-    const agentFraction = document.getElementById("agent-fraction");
+    // const agentFraction = document.getElementById("agent-fraction");
     const sellerFraction = document.getElementById("seller-fraction");
 
     // Базовая величина в белорусских рублях
@@ -22,12 +22,21 @@ export function App () {
     inputValidator(flatSquare, flatCost);
 
     // Блок расчётов
+    let costPerSquareMeter
+
     let bynFlatCost = flatCost * exchangeRate
+
     let baseFlatCost = Math.floor(((flatCost * exchangeRate) / base));
-    let costPerSquareMeter = (flatCost / flatSquare).toFixed(2);
+
+    if (flatSquare !== 0) {
+        costPerSquareMeter = (flatCost / flatSquare).toFixed(2);
+    } else {
+        costPerSquareMeter = '-';
+    }
+
     let agencyPercent = defaultAgencyPercent(baseFlatCost);
     let agencyFractionValue = getAgencyFraction(bynFlatCost, agencyPercent, exchangeRate);
-    let agentFractionValue = (agencyFractionValue / 2).toFixed(2);
+    // let agentFractionValue = (agencyFractionValue / 2).toFixed(2);
     let sellerFractionValue = flatCost - agencyFractionValue;
 
     // Вывод
