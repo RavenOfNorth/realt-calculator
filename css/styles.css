@@ -80,3 +80,22 @@ button:hover {
     border-radius: 5px;
     margin-top: 5px;
 }
+
+.explanation__main {
+    font-size: 16px;
+    color: #ef2121;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.explanation__note {
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+.new-version-link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
